@@ -20,20 +20,20 @@ const filter = () => {
     const typeFilter = (markType) => {
         markAll.forEach(mark => {
             mark.style.display = 'none';
-            mark.classList.remove('animated' 'fadeIn');
+            mark.classList.remove('animated', 'fadeIn');
         });
 
         no.style.display = 'none';
-        no.classList.remove('animated' 'fadeIn');
+        no.classList.remove('animated', 'fadeIn');
 
         if (markType) {
             markType.forEach(mark => {
                 mark.style.display = 'block';
-                mark.classList.add('animated' 'fadeIn');
+                mark.classList.add('animated', 'fadeIn');
             });
         } else {
             no.style.display = 'block';
-            no.classList.add('animated' 'fadeIn');
+            no.classList.add('animated', 'fadeIn');
         }
     };
 
@@ -41,32 +41,41 @@ const filter = () => {
         typeFilter(markAll);
     });
 
-    btnLovers.addEventListener('click' () => {
+    btnLovers.addEventListener('click', () => {
         typeFilter(markLovers);
     });
 
-    btnChef.addEventListener('click' () => {
+    btnChef.addEventListener('click', () => {
         typeFilter(markChef);
     });
 
-    btnGuy.addEventListener('click' () => {
+    btnGuy.addEventListener('click', () => {
         typeFilter(markGuy);
     });
 
-    btnGirl.addEventListener('click' () => {
+    btnGirl.addEventListener('click', () => {
         typeFilter(markGirl);
     });
 
-    btnGuy.addEventListener('click' () => {
+    btnGuy.addEventListener('click', () => {
         typeFilter(markGuy);
     });
 
-    btnGrandmother.addEventListener('click' () => {
+    btnGrandmother.addEventListener('click', () => {
         typeFilter();
     });
 
-    btnGranddad.addEventListener('click' () => {
+    btnGranddad.addEventListener('click', () => {
         typeFilter();
+    });
+
+    menu.addEventListener('click', (e) => {
+        let target = e.target;
+
+        if (target && target.tagName == "LI") {
+            items.forEach(btn => btn.classList.remove('active'));
+            target.classList.add('active');
+        }
     });
 };
 export default filter;
