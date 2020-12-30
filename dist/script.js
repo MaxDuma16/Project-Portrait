@@ -4500,6 +4500,11 @@ var burger = function burger(menuSelector, burgerSelector) {
       menuElem.style.display = 'none';
     }
   });
+  window.addEventListener('resize', function () {
+    if (window.screen.availWidth > 992) {
+      menuElem.style.display = 'none';
+    }
+  });
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (burger);
