@@ -10,6 +10,7 @@ import pictureSize from './modules/pictureSize';
 // import accordion from './modules/accordion';
 import accordionTwo from './modules/accordionTwo';
 import burger from './modules/burger';
+import scrolling from './modules/scrolling';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
@@ -29,4 +30,5 @@ window.addEventListener('DOMContentLoaded', () => {
     // accordion('.accordion-heading', '.accordion-block');  //Option 1
     accordionTwo('.accordion-heading'); //Option 2
     burger('.burger-menu', '.burger');
+    scrolling('.pageup');
 });
